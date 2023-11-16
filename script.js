@@ -7,6 +7,8 @@ const addButton = document.getElementById('addButton');
 let acceptButtons = document.getElementsByClassName('accept');
 let deleteButtons = document.getElementsByClassName('delete');
 
+let hrNodeList = document.getElementsByClassName('middleHr');
+
 let input;
 let toDo;
 
@@ -23,8 +25,9 @@ addButton.onclick = () => {
             linesList[i].classList.add('toDoDone');
         }
 
-        deleteButtons.onclick = () => {
-
+        deleteButtons[i].onclick = () => {
+            linesList[i].remove();
+            hrNodeList[i].remove();
         }
     }
 }

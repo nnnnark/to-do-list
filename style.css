@@ -1,0 +1,126 @@
+body{
+    background-image: linear-gradient(#0066ff, #002aff);
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    margin-top: 80px;
+    font-family: monospace;
+    font-size: 50px;
+    color: white;
+}
+
+#content{
+    margin-top: 60px;
+    /*display: grid;*/
+    margin-left: 50%;
+    transform: translate(-50%);
+    height: 350px;
+    width: 600px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#input{
+    text-align: right;
+    margin-top: 20px;
+    margin-left: 80px;
+    /*transform: translate(-50%);*/
+    width: 440px;
+    height: 30px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: monospace;
+    transition: 200ms;
+}
+#input:focus{
+    outline: none;
+}
+
+#addButton{
+    margin-left: 5px;
+    align-self: center;
+    width: 34px;
+    height: 34px;
+    /*font-family: monospace;*/
+    font-size: 25px;
+    border: none;
+    transition: 300ms;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#addButton:hover{
+    rotate: 180deg;
+    background-color: #ffe375;
+}
+
+#list{
+    transition: 200ms;
+}
+
+#topHr{
+    width: 600px;
+    background-color: #cbcbcb;
+    height: 1px;
+    border: none;
+    margin-bottom: 2px;
+}
+
+.middleHr{
+    width: 400px;
+    background-color: #cbcbcb;
+    height: 0.5px;
+    border: none;
+}
+
+.lines{
+    display: flex;
+    width: 600px;
+    height: 70px;
+    transition: 200ms;
+    /*background-color: #eeeeee;*/
+}
+
+.toDo{
+    width: 400px;
+    /*height: 30px;*/
+    margin: auto;
+    /*border: 1px solid black;*/
+    font-family: monospace;
+    font-size: 17px;
+    text-align: center;
+}
+
+.accept{
+    margin-right: 10px;
+}
+.accept:hover{
+    background-color: #75ff78;
+}
+.toDoDone{
+    background-color: #75ff78;
+    transition: 200ms;
+}
+
+.delete{
+    margin-right: 40px;
+    font-family: monospace;
+}
+.delete:hover{
+    background-color: crimson;
+}
+
+.accept,
+.delete{
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: 200ms;
+}
+

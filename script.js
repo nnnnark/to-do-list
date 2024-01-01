@@ -16,18 +16,14 @@ addButton.onclick = () => {
     input = inputedText.value;
     !inputedText.value ?
         alert('Write Your ToDo!') :
-        listElements.innerHTML = '<div class="lines"> <div class="toDo">' + input + '</div> <button class="accept">✓</button> <button class="delete">X</button></div> <hr class="middleHr">' + listElements.innerHTML;
+        listElements.innerHTML = '<div class="lines"> <div class="toDo">' + input + '</div> <button class="accept">✓</button> <button class="delete">X</button></div>' + listElements.innerHTML;
         inputedText.value = '';
-    for (let i = 0; i < toDoNodeList.length; i++) {
-        acceptButtons[i].onclick = () => {
-            toDo = toDoNodeList[i].innerHTML;
-            toDoNodeList[i].innerHTML = '<del>' + toDo + '</del>';
-            linesList[i].classList.add('toDoDone');
-        }
+}
 
-        deleteButtons[i].onclick = () => {
-            linesList[i].remove();
-            hrNodeList[i].remove();
-        }
+listElements.onclick = (e) => {
+    if(e.target.classList == 'accept'){
+        e.target.parentElement.classList.add('toDoDone');
+    }else if(e.target.classList == 'delete'){
+        e.target.parentElement.remove();
     }
 }

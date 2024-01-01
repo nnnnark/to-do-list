@@ -58,6 +58,9 @@ h1{
 
 #list{
     transition: 200ms;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 245px;
 }
 
 #topHr{
@@ -95,21 +98,30 @@ h1{
 
 .accept{
     margin-right: 10px;
+    text-decoration: none;
 }
 .accept:hover{
-    background-color: #75ff78;
+    background-color: #07cc0c;
+    color: white;
+    text-decoration: none;
+
 }
 .toDoDone{
     background-color: #75ff78;
     transition: 200ms;
+    /* text-decoration: line-through; */
 }
 
 .delete{
     margin-right: 40px;
     font-family: monospace;
+    text-decoration: none;
 }
 .delete:hover{
+    color: white;
     background-color: crimson;
+    text-decoration: none;
+
 }
 
 .accept,
@@ -122,5 +134,6 @@ h1{
     cursor: pointer;
     border: none;
     transition: 200ms;
+    font-weight: bold;
 }
 

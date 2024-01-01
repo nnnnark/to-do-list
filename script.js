@@ -22,7 +22,13 @@ addButton.onclick = () => {
 
 listElements.onclick = (e) => {
     if(e.target.classList == 'accept'){
-        e.target.parentElement.classList.add('toDoDone');
+        if(!e.target.parentElement.classList.contains('toDoDone')){
+            e.target.parentElement.classList.add('toDoDone');
+            e.target.innerHTML = '<';
+        }else if(e.target.parentElement.classList.contains('toDoDone')){
+            e.target.parentElement.classList.remove('toDoDone');
+            e.target.innerHTML = '✓'; 
+        }
     }else if(e.target.classList == 'delete'){
         e.target.parentElement.remove();
     }
